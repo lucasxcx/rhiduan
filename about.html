@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre | Estúdio Design</title>
+        <link rel="icon" type="image/png" href="./images/Icone.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="about.css">
+    </head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="./images/Ativo 3.png" alt="Rhiduan">
+                </a>
+                <button class="hamburger">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="nav-links">
+                    <a href="/index.html">HOME</a>
+                    <a href="#contato">CONTATO</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Nosso Processo: Criatividade com Propósito.</h1>
+                <p class="intro">Ouvir, criar e aplicar.</p>
+                <p class="description">Cada marca tem sua própria história, e nosso trabalho é transformar essa identidade em um design autêntico e memorável. Nossa metodologia é um mergulho estratégico e criativo, garantindo que cada detalhe tenha significado e impacto.</p>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <div class="process-image">
+                    <img src="./images/design.jpg" alt="Pessoas trabalhando em design">
+                </div>
+
+                <div class="steps">
+                    <div class="step" id="step-1">
+                        <div class="step-icon">
+                            <img src="./images/Imersão.png" alt="Ícone Imersão">
+                        </div>
+                        <div class="step-content">
+                            <h2>01. Imersão</h2>
+                            <p class="highlight">Antes de criar, precisamos entender.</p>
+                            <p>Investigamos sua essência, valores, mercado e público para construir um design que faça sentido e gere conexão real.</p>
+                        </div>
+                    </div>
+
+                    <div class="step" id="step-2">
+                        <div class="step-icon">
+                            <img src="./images/Direção.png" alt="Ícone Direção">
+                        </div>
+                        <div class="step-content">
+                            <h2>02. Direção</h2>
+                            <p class="highlight">Com base nos insights coletados.</p>
+                            <p>Definimos a identidade visual e o conceito estratégico, alinhando expectativas para garantir um posicionamento sólido e coerente.</p>
+                        </div>
+                    </div>
+
+                    <div class="step" id="step-3">
+                        <div class="step-icon">
+                            <img src="./images/Criação.png" alt="Ícone Criação">
+                        </div>
+                        <div class="step-content">
+                            <h2>03. Criação</h2>
+                            <p class="highlight">Aqui, transformamos conceitos em formas, cores e tipografias.</p>
+                            <p>Experimentamos, refinamos e lapidamos até chegarmos a uma identidade visual que represente sua marca com força e personalidade.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="step" id="step-4">
+                        <div class="step-icon">
+                            <img src="./images/Apresentação.png" alt="Ícone Apresentação">
+                        </div>
+                        <div class="step-content">
+                            <h2>04. Apresentação</h2>
+                            <p class="highlight">Não é só sobre estética, mas sobre funcionalidade.</p>
+                            <p> Apresentamos o projeto com aplicações reais, mostrando como sua nova identidade se comporta no mundo.</p>
+                        </div>
+                    </div>
+
+                    <div class="step" id="step-5">
+                        <div class="step-icon">
+                            <img src="./images/Entrega.png" alt="Ícone Entrega">
+                        </div>
+                        <div class="step-content">
+                            <h2>05. Entrega</h2>
+                            <p class="highlight">Fornecemos todos os arquivos e diretrizes para garantir que sua marca seja aplicada com consistência.</p>
+                            <p>Um processo criativo sem fórmulas prontas, guiado por estratégia e significado. O resultado? Um design autêntico, que conecta e faz sentido.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="./images/Ativo 3.png" alt="Logo do Estúdio">
+            </div>
+            <div class="footer-copyright">
+                <p>© 2024 | Estúdio Design</p>
+            </div>
+            <div class="footer-email">
+                <p><a href="mailto:Contatolucasart@gmail.com">contatolucasart@gmail.com</a></p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com/rhiduanof/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.behance.net/for_you" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function checkVisibility() {
+        const steps = document.querySelectorAll('.step');
+        const windowHeight = window.innerHeight;
+        
+        steps.forEach(function(step) {
+            const positionFromTop = step.getBoundingClientRect().top;
+            
+            if (positionFromTop - windowHeight <= -100) {
+                step.classList.add('visible');
+            }
+        });
+        
+        // Adiciona classe ao header quando rolar a página
+        if (window.scrollY > 50) {
+            document.querySelector('header').classList.add('scrolled');
+        } else {
+            document.querySelector('header').classList.remove('scrolled');
+        }
+    }
+    
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+    
+    // Menu hamburger para mobile
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
+    // Fechar menu ao clicar em um link
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+});
+</script>
+</body>
+</html>
